@@ -1,6 +1,6 @@
-/* style.css */
+/* style2.css */
 
-/* Body and Font */
+/* Body font and background */
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f4f4f4;
@@ -31,43 +31,58 @@ header ul li a:hover {
   color: #ffa500;
 }
 
-/* Main Content Layout */
+/* Layout using Floats */
+#sidebar {
+  float: left;
+  width: 25%;
+  padding: 15px;
+  background-color: #e3e3e3;
+}
+
+#main-content {
+  float: right;
+  width: 70%;
+  padding: 15px;
+}
+
+/* Positioned Elements */
+header {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+}
+
 main {
   margin: 0 auto;
   max-width: 800px;
-  padding: 20px;
 }
 
-/* Header and Section Titles */
-h1 {
-  text-align: center;
-  color: #333;
-  margin-bottom: 10px;
+/* Styling for Images and Sections */
+img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
 }
 
-h2 {
-  color: #333;
-  margin-top: 20px;
-  margin-bottom: 10px;
-  border-bottom: 2px solid #333;
-  padding-bottom: 5px;
-}
-
-/* Unordered Lists Styling */
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-ul li {
-  padding: 5px 0;
-}
-
-/* Section Styling */
 section {
   margin-bottom: 20px;
-  padding: 10px 0;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Footer (example of relative positioning) */
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
 }
 
 
