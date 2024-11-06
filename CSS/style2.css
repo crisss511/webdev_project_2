@@ -1,0 +1,89 @@
+/* style2.css */
+
+/* Body font and background */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+}
+
+/* Centered Navigation */
+header ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+header ul li {
+  margin: 0 15px;
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header ul li a:hover {
+  color: #ffa500;
+}
+
+/* Layout using Floats */
+#sidebar {
+  float: left;
+  width: 25%;
+  padding: 15px;
+  background-color: #e3e3e3;
+}
+
+#main-content {
+  float: right;
+  width: 70%;
+  padding: 15px;
+}
+
+/* Positioned Elements */
+header {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Styling for Images and Sections */
+img {
+  width: 100%;
+  max-width: 560px;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+section {
+  margin-bottom: 20px;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+/* Footer (example of relative positioning) */
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+
+
+
