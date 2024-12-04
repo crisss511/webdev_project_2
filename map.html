@@ -1,65 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head> 
+<head>
   <meta charset="utf-8">
   <title>Map</title>
   <link rel="stylesheet" href="style/reset.css">
   <link rel="stylesheet" href="style/style2.css">
-  <script src="js/javascript.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
 </head>
-
 <body>
   <header>
     <ul>
       <li><a href="index.html">Resume</a></li>
       <li><a href="videogames.html">Rocket League</a></li>
       <li><a href="volleyball.html">Volleyball</a></li>
-	  <li><a href="map.html">Map</a></li>
+      <li><a href="map.html">Map</a></li>
     </ul>
   </header>
-  
-  
-  
-   <div class="map-wrapper">
-      <div id="map"></div>
-    </div>
-	
-	<script>
-	function initMap() {
-	const iitCoords = { lat: 41.83563922236108, lng: -87.62592116170968 };
-	
-	const map = new google.maps.Map(document.getElementById("map"), {
-        center: iitCoords,
-        zoom: 22,
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		});
+  <div class="map-wrapper">
+    <div id="map"></div>
+  </div>
+  <script>
+    function initMap() {
+      const iitCoords = { lat: 41.83563922236108, lng: -87.62592116170968 };
 
-    const marker = new google.maps.Marker({
+      const map = new google.maps.Map(document.getElementById("map"), {
+        center: iitCoords,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.SATELLITE,
+      });
+
+      const marker = new google.maps.Marker({
         position: iitCoords,
         map: map,
         title: "IIT MTCC",
-     });
+      });
 
-       marker.setAnimation(google.maps.Animation.BOUNCE);
+      marker.setAnimation(google.maps.Animation.BOUNCE);
 
-    const infoWindow = new google.maps.InfoWindow({
+      const infoWindow = new google.maps.InfoWindow({
         content: `
            <div class="info-window-content" style="color: black;">
             <h3>IIT MTCC</h3>
             <p>Welcome to IIT MTCC, Chicago!</p>
            </div>
           `,
-     });
+      });
 
-    marker.addListener("mouseover", function () {
+      marker.addListener("mouseover", function () {
         infoWindow.open(map, marker);
-    });
+      });
 
-    marker.addListener("mouseout", function () {
-      infoWindow.close();
-    });
-	}
-    </script>
-  </body>
-
+      marker.addListener("mouseout", function () {
+        infoWindow.close();
+      });
+    }
+  </script>
+</body>
 </html>
