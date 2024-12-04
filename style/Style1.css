@@ -162,3 +162,223 @@ button {
 button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
+/* Global Styles (Mobile-First) */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f4f4;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* Centered Navigation */
+header ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column; /* Mobile: stack menu items vertically */
+  align-items: center;
+  background-color: #333;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+header ul li {
+  margin: 10px 0; /* Space between items */
+}
+
+header ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header ul li a:hover {
+  color: #ffa500;
+}
+
+/* Header Styling */
+header {
+  position: relative;
+  width: 100%;
+  background-color: #333;
+}
+
+/* Main Content Layout */
+main {
+  margin: 0 auto;
+  max-width: 100%; /* Full-width on mobile */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Section Styling */
+section {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+
+/* Header and Section Titles */
+h1, h2, h3 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+h2 {
+  margin-top: 20px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 5px;
+}
+
+/* Image Styling */
+img {
+  width: 100%;
+  max-width: 100%; /* Make images responsive */
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Footer Styling */
+footer {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  margin-top: 20px;
+}
+
+/* Map and Slider */
+#map {
+  width: 100%;
+  height: 300px; /* Smaller map height for mobile */
+  background-color: #f4f4f4; /* Fallback background */
+}
+
+.slider-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0; /* Initially hidden */
+  z-index: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slider:first-child {
+  opacity: 1; /* Display the first image initially */
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Sidebar */
+#sidebar {
+  width: 100%; /* Full-width on mobile */
+  padding: 15px;
+  background-color: #e3e3e3;
+}
+
+#main-content {
+  width: 100%; /* Full-width on mobile */
+  padding: 15px;
+}
+
+/* Unordered Lists Styling */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  padding: 5px 0;
+}
+
+/* Media Queries */
+
+/* Medium Screens (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  header ul {
+    flex-direction: row; /* Horizontal menu on tablets */
+  }
+
+  header ul li {
+    margin: 0 15px; /* Adjust spacing */
+  }
+
+  #map {
+    height: 400px; /* Increase map height */
+  }
+
+  #sidebar {
+    width: 30%; /* Sidebar takes 30% of the width */
+    float: left; /* Float sidebar */
+  }
+
+  #main-content {
+    width: 65%; /* Main content takes 65% */
+    float: right;
+  }
+}
+
+/* Large Screens (1025px and above) */
+@media (min-width: 1025px) {
+  main {
+    max-width: 1200px; /* Centered layout with maximum width */
+  }
+
+  #map {
+    height: 500px; /* Full map height on desktops */
+  }
+
+  #sidebar {
+    width: 25%; /* Sidebar takes 25% */
+    float: left;
+  }
+
+  #main-content {
+    width: 70%; /* Main content takes 70% */
+    float: right;
+  }
+
+  header ul {
+    justify-content: flex-start; /* Align menu to the left */
+  }
+
+  header ul li {
+    margin: 0 20px; /* Adjust spacing for desktop */
+  }
+}
+
