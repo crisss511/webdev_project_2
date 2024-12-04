@@ -3,7 +3,7 @@ function initMap() {
 
   const map = new google.maps.Map(document.getElementById("map"), {
     center: iitCoords,
-    zoom: 16, // Reasonable zoom level
+    zoom: 10, // Reasonable zoom level
     mapTypeId: google.maps.MapTypeId.SATELLITE,
   });
 
