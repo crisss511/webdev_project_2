@@ -115,6 +115,7 @@ iframe {
 #map {
   width: 75%;
   height: 400px;
+  background-color: #f4f4f4; 
 }
 .slider-container {
   position: relative;
